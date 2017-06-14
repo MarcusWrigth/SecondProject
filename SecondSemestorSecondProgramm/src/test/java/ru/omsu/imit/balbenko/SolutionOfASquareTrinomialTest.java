@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
 public class SolutionOfASquareTrinomialTest {
     @Test
     public void solutionOfASquareTrinomial() throws Exception {
-        ArrayList<Double>firstTest = new ArrayList<Double>();
+        ArrayList<Double> firstTest = new ArrayList<Double>();
         firstTest.add(10.0);
         firstTest.add(-0.4);
 
@@ -19,7 +19,7 @@ public class SolutionOfASquareTrinomialTest {
         solutionOfASquareTrinomial.solutionOfASquareTrinomial();
         Assert.assertEquals(firstTest, solutionOfASquareTrinomial.getResult());
 
-        ArrayList<Double>secondTest = new ArrayList<Double>();
+        ArrayList<Double> secondTest = new ArrayList<Double>();
         secondTest.add(-3.0);
         secondTest.add(-3.0);
 
