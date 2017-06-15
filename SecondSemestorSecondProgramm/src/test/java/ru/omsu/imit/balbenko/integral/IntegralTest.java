@@ -11,16 +11,9 @@ import static org.junit.Assert.*;
 public class IntegralTest {
     @Test
     public void calculateFunctional() throws FunctionException, IntegralException {
-        Integral testIntegral = new Integral(0,1,10);
-        double result = testIntegral.calculateFunctional(new Exp_x(3,1,1,200));
-        double exc = 16.640098490506755;
-        assertEquals(result,exc,0.00000000001);
-    }
-    @Test
-    public void calculateFunctional2() throws FunctionException, IntegralException {
-        Integral testIntegral2 = new Integral(0, 1, 10);
-        double result2 = testIntegral2.calculateFunctional(new TheLinearEquation(3, 4, 1, 20));
-        double exc2 = 9.35;
-        assertEquals(result2, exc2, 0.00000000001);
+        Integral testIntegral = new Integral(0, Math.PI * 2,100);
+        double result = testIntegral.calculateFunctional(new Sin_x(1,1,0,200));
+        double exc = 0;
+        assertEquals(exc,result,0.00000000001);
     }
 }

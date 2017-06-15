@@ -16,12 +16,12 @@ public class Integral implements IFunctional {
         this.point = point;
     }
 
-    public <T extends IFunctionOfOneRealArgument> double calculateFunctional(T function) throws FunctionException {
+    public double calculateFunctional(IFunctionOfOneRealArgument function) throws FunctionException {
         double step = (rightValue - leftValue) / point;
         double integralValue = 0.0;
 
         for (double i = leftValue; i < rightValue; i=i + step) {
-            integralValue += ((i + step) - i) * function.functionOfOneRealArgument(i + 1);
+            integralValue += step * function.functionOfOneRealArgument(i);
         }
         return integralValue;
     }

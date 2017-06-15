@@ -21,8 +21,8 @@ public class SolutionOfASquareTrinomial {
             result.add((-second + Math.sqrt(discriminant)) / (2 * first));
             result.add((-second - Math.sqrt(discriminant)) / (2 * first));
         } else if (discriminant == 0.0) {
-            result.add((-second + Math.sqrt(discriminant)) / (2 * first));
-            result.add((-second + Math.sqrt(discriminant)) / (2 * first));
+            result.add((-second) / (2 * first));
+            result.add((-second) / (2 * first));
         } else {
             throw new Exception("Discriminant < 0");
         }
